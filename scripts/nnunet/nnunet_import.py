@@ -181,7 +181,7 @@ def import_dir(
     save_seg: bool = True,
     save_iseg: bool = True,
     stuff: Optional[Sequence[int]] = None,
-    num_workers: int = 6,
+    num_workers: int = 1,
 ):
     source = [f for f in nnunet_prediction_dir.iterdir() if f.suffix == ".npz"]
 
