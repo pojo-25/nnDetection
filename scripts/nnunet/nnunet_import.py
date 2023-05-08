@@ -48,7 +48,7 @@ def import_nnunet_boxes(
         boxes_gt_dir: Pathlike,
         classes: Sequence[str],
         stuff: Optional[Sequence[int]] = None,
-        num_workers: int = 6,
+        num_workers: int = 1,
 ):
     assert nnunet_prediction_dir.is_dir(), f"{nnunet_prediction_dir} is not a dir"
     save_dir = Path(save_dir)
