@@ -52,6 +52,7 @@ def get_augmenter(dataloader,
     Wrapper to switch between multi-threaded and single-threaded augmenter
     """
     if multiprocessing: 
+        print("XXXXXXXXXXXXXXXXXXXXXXXXXXX")
         logger.info(f"Using {num_processes} num_processes "
                     f"and {num_cached_per_queue} num_cached_per_queue for augmentation.")
         loader = FixedLengthMultiThreadedAugmenter(
@@ -63,7 +64,9 @@ def get_augmenter(dataloader,
             pin_memory=pin_memory,
             **kwargs,
             )
+         
     else:
+        print("YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY")
         loader = FixedLengthSingleThreadedAugmenter(
             data_loader=dataloader,
             transform=transform,
