@@ -23,7 +23,7 @@ augment_cfg:
 
   # Additional overwrites
   # patch_size; Default: plan
-  # batch_size; Default: plan
+  batch_size: 4
   # splits; Default: splits_final
 
 trainer_cfg:
